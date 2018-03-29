@@ -16,3 +16,6 @@ a2b([a|Ta],[b|Tb]) :-
 sklej([],X,X).
 sklej([X|L1],L2,[X|L3]) :-
 	sklej(L1,L2,L3).
+
+ostatni(E, L):-
+	sklej(_, [E], L).
