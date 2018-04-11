@@ -9,3 +9,13 @@ To install SWI-Prolog on your linux device run ```setup.sh``` script, that is lo
 ## Quick start
 
 For Getting started advice, please refer to the <a href="http://www.swi-prolog.org/pldoc/man?section=quickstart">SWI-Prolog Tutorials</a>.
+
+## Prolog Basics
+
+Prolog programs are made up of **facts** and **rules**. 
+
+A fact asserts some property of an object, or relation between two or more objects. For example ```loves(romeo, juliet).``` is a fact and can be read as Romeo loves Juliet. ```loves``` is a **predicate**, and ```romeo``` and ```juliet``` are called **atoms**. Atom is any sequence of letters and digits, beginning with a lowercase letter. Alternatively, an atom is any sequence of characters, enclosed by single quotes ('). 
+
+To create what is called **clause** or **rule**, we use symbol ":-", which is pronounced "if". For example: ```loves(juliet, romeo) :- loves(romeo, juliet).``` Rules allow us to infer that a property or relationship holds based on preconditions.
+
+A **variable** is written as a sequence of letters and digits, beginning with a capital letter. Variables allow us to answer questions, for example if we write ```loves(romeo, X)``` in terminal, the output will be: ```X = juliet```
