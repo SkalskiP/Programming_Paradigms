@@ -56,4 +56,12 @@ get_grandparent :-
 
 brother(bob, bill).
 
+grand_parent(X, Y) :-
+    parent(Z, X),
+    parent(Y, Z).
 
+blushes(X) :- human(X).
+human(derek).
+
+stabs(tybalt, marcutio, sword).
+hates(romeo, X) :- stabs(X, marcutio, sword).
