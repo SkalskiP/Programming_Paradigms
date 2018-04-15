@@ -19,3 +19,5 @@ A fact asserts some property of an object, or relation between two or more objec
 To create what is called **clause** or **rule**, we use symbol ":-", which is pronounced "if". For example: ```loves(juliet, romeo) :- loves(romeo, juliet).``` Rules allow us to infer that a property or relationship holds based on preconditions.
 
 A **variable** is written as a sequence of letters and digits, beginning with a capital letter. Variables allow us to answer questions, for example if we write ```loves(romeo, X)``` in terminal, the output will be: ```X = juliet```
+
+The **anonymous variable** ```_``` is the only variable where different occurrences represent different variables. Other variables that start with ```_``` are not anonymous. For example we can use ```male(_)``` to check for the existence of male predicate.
