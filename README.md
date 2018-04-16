@@ -21,3 +21,9 @@ To create what is called **clause** or **rule**, we use symbol ":-", which is pr
 A **variable** is written as a sequence of letters and digits, beginning with a capital letter. Variables allow us to answer questions, for example if we write ```loves(romeo, X)``` in terminal, the output will be: ```X = juliet```
 
 The **anonymous variable** ```_``` is the only variable where different occurrences represent different variables. Other variables that start with ```_``` are not anonymous. For example we can use ```male(_)``` to check for the existence of male predicate.
+
+```write(+Term)``` - write Term to the current output, using brackets and operators where appropriate.
+```read(-Term)``` - read the next Prolog term from the current input stream and unify it with Term.
+```listing(:Pred)``` - list predicates specified by Pred.
+```nl``` - write a newline character to the current output stream.]
+```assert(+Term)``` - assert a clause (fact or rule) into the database. 
