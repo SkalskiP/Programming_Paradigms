@@ -6,6 +6,7 @@ ksiazka(34, 'Kobieta z wydm', autor('Kobo Abe', 1924-1993),wydanie('Wydawnictwo 
 ksiazka(36, 'Zamek', autor('Frans Kafka', 1883-1924),wydanie('Zielona Sowa',2001)).
 ksiazka(37, 'Gargantua i Pantagruel', autor(' François Rabelais', 1494- 1553),wydanie('Siedmioróg',2004)).
 
+
 % Należy napisać klauzule, które znajdują w bazie: 
 % 1) książki wydane po śmierci swojego autora 
 % 2) autorów, którzy mieli szansę się spotkać(żyli w tym samym czasie) 
@@ -31,3 +32,12 @@ autorzy_sie_spotkali() :-
     fail.
 
 % Ad 3.
+
+wydawnicta() :-
+    setof(X,wydawnictwoXIXw(X),L),
+    write(L).
+
+wydawnictwoXIXw(W) :-
+    ksiazka(_, _, autor(_, Y-_),wydanie(W,_)),
+    Y > 1800,
+    Y < 1901.
